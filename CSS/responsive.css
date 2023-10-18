@@ -1,0 +1,339 @@
+
+:root{
+    --gradient-bg: linear-gradient(45deg, #7b4bc9, #ff38c3, #ff4f78, #cfa20c, #fc9723, #ff6913, #eb361e);
+    --body-color: #f2f2f2;
+    --nav-color: #f2f2f2;
+    --section-color: #fff;
+    --font-color: #000000;  
+    --btn-color: #007bff;  
+    --box-shadow:  0 2px 15px #00000080;
+    --img-shadow: #00000083;
+    --btn-hover: #0056b3;
+    --footer-color: #0e2431;
+    --filter-invert: invert(95%);
+}
+.dark-mode{
+    --gradient-bg: linear-gradient(45deg, #7b4bc9, #ff38c3, #ff4f78, #cfa20c, #fc9723, #ff6913, #eb361e);
+    --body-color: #0f0f0f;
+    --nav-color: #2e2e2e;
+    --section-color: #363636;
+    --font-color: #FFFFFF;  
+    --btn-color: #FF4C29;  
+    --box-shadow:  0 2px 15px #00000080;
+    --img-shadow: #ffffff4f;
+    --btn-hover: #ca2200;   
+    --footer-color: #0f0f0f;
+    --filter-invert: invert(18%);
+}
+
+
+/* ========theme btn responsive============== */
+@media screen and (max-width:750px){
+    .theme-btn{
+        width: 2rem;
+        height: 1.3rem;
+    }
+    .theme-ball{
+        width: 1rem;
+        height: 1rem;
+        top: .15rem;
+        left: .15rem;
+    }
+    #check-btn:checked + .theme-btn .theme-ball{
+        transform: translateX(.65rem);
+    }
+}
+
+
+
+
+/* ==================nav bar responsive================= */
+@media screen and (max-width:900px){
+    .nav-items{
+        width: 100%;
+        flex-direction: column;
+        height: 60vh;
+        background-color: var(--nav-color);
+        box-shadow: var(--box-shadow);
+        box-shadow: #000000;
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        padding-top: 80px;
+        padding-bottom: 20px;
+        border-radius: 1rem;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+        
+    }
+    .logo{
+        width: 8rem;
+    }
+    .nav-li{
+        height: 10%;
+        margin: auto;
+    }
+    .nav-links{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .nav-toggler i{
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: block;
+    }
+}
+@media screen and (max-width:500px){
+    .navbar{
+        padding: 0 10px;
+        height: 70px;
+    }
+    .logo{
+        width: 6rem;
+    }
+}
+
+
+
+
+/* =====================================Home Responsive=============================== */
+@media screen and (max-width: 970px) {
+    .content-box h1{
+        font-size: 6rem;
+    }
+    .content-box p{
+        width: 100%;
+        font-size: 30px;
+    }
+    .img-box{
+        width: 45%;
+        height: auto;
+    }
+    .img-box img{
+        transform: rotate(3deg);
+        width: 100%;
+        height: auto;
+    }
+    
+}
+@media only screen and (max-width:700px){
+    .main{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 2rem;
+
+    }
+    .content-box{
+        padding: 0;
+        width: 100%;
+    }
+    .content-box h1{
+        font-size: 4.5rem;
+    }
+    .content-box p{
+        font-size: 1.3rem;
+        width: 90%;
+    }
+
+    
+    .img-box {  
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .img-box img{
+        border-radius: 30% 70% 59% 41% / 30% 42% 58% 70%;
+        width: 60%;
+        transform: rotate(0);
+    }
+}
+@media only screen and (max-width:500px){
+    .img-box img{
+        width: 80%;
+    }
+}
+
+
+
+
+/* ==================================About responsive=============================== */
+@media screen and (max-width: 900px){
+    .about-section{
+        padding: 3rem 2rem;
+    }
+    .about-container{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    .abt-me{
+        width: 100%;
+    }
+    .my-mail h1{
+        font-size: 1.4rem;
+    }
+    a.mail-id{
+        font-size: 1rem;
+    }
+    i.m-m{
+        font-size: 1rem;
+        padding-right: .4rem;
+    }
+}
+
+
+
+
+/* ====================================Skill&Tools Responsive============================= */
+
+@media screen and (max-width: 900px){
+    .skillTool-section{
+        padding: 3rem 1rem;
+    }
+    .skillTool-card{
+        width: 100%; 
+    }
+    .skillTool-card .skillTool-img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .work-box{
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .work-info{
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        position: absolute;
+        background-color: #0f0f0f4b;
+        backdrop-filter: blur(5px);
+        padding: .5rem;
+        color: var(--font-color);
+        border-radius: .4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: 1s all ease;
+    }
+    .work-box:hover .work-info{
+        top: 0;
+    }
+    .w-img{
+        height: 100%;
+        border-radius: .4rem;
+    }
+    .work-info h1{
+        font-size: 1.4rem;
+    }
+}
+
+
+
+/* =====================================Work&Project Responsive================================ */
+@media screen and (max-width: 1100px){
+    .work-box{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 750px){
+    .work-section{
+        padding: 3rem 2rem;
+    }
+    .work-container{
+        justify-content: center;
+    }
+    .work-box{
+        width: 70%;
+    }
+    .work-info{
+        padding: .5rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .work-box{
+        width: 100%;
+    }
+    .work-info h1{
+        font-size: .9rem;
+    }
+    .w-para{
+        font-size: .8rem;
+    }
+    .w-btn-bx a{
+        padding: .2rem .1rem;
+        font-size: .7rem;
+    }
+}
+
+
+
+
+/* ==========================================Contact Responsive==================================== */
+@media screen and (max-width: 770px) {
+    .contact-section{
+        padding: 3rem 2rem;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-form {
+        width: 90%;
+    }
+    
+    .contact-input {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* =========================================Footer Responsive================================== */
+@media screen and (max-width: 700px) {
+    .foot{
+        font-size: .9rem;
+    }
+    .footer-img img{
+        width: 10rem;
+        margin: 1rem;
+    }
+}
+
+/* ================================All Sections Heading=============================== */
+@media screen and (max-width:550px) {
+    .section-title::after{
+        width: 35%;
+        left: 32.5%;
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    .section-title{
+        margin: 1rem 0 1rem 0;
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+}
+
+
+
+/* ```````````````Setting hover only for big screens``````````````` */
+@media screen and (min-width:800px) {
+    .social-links a:hover i {
+        animation: popUp .3s  ease-in  ;
+        transform: translateY(-12px);
+    }
+}
+
+@media screen and (min-width:971px) {
+    .img-box img:hover{
+        transform: rotate(3deg);
+    }
+}
